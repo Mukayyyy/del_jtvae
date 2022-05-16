@@ -1,8 +1,16 @@
-This README file contains only old info about the original FragVAE.
+### Source code for the paper "Multi-Objective Drug Design Based on Graph-Fragment Molecular Representation and Deep Evolutionary Learning"
 
-# Codes for JTVAE are from the paper "Junction Tree Variational Autoencoder for Molecular Graph Generation" (Wengong Jin)
+Muhetaer Mukaidaisi, and Yifeng Li
+
+An integration of the graph-fragment based generative model JTVAE and the DEL framework
+
+### JTVAE model is from the paper "Junction Tree Variational Autoencoder for Molecular Graph Generation"  by Wengong Jin
 
 Link to the paper: [arXiv](https://arxiv.org/abs/1802.04364)
+
+### DEL framework is proposed in the paper "Deep Evolutionary Learning for Molecular Design"
+
+Link to the paper: [IEEE CIM](https://ieeexplore.ieee.org/document/9756593)
 
 ### Installation
 
@@ -49,12 +57,17 @@ Use `python manage.py preprocess --help` to see other useful options for preproc
 
 This will download the necessary files in the `DATA` folder, and will preprocess them as described in the paper.
 
+### Running 
 
+After preprocessing, you may run the framework altogether (training + samplling) by running the default script:
 
+`bash runscript5_3.sh`
+
+where runscript5_3.sh contains the 
 
 ### Training
 
-After preprocessing, you can train the model running:
+You can also train the model solely running:
 
 `python manage.py train --dataset <DATASET_NAME>`
 
@@ -130,7 +143,3 @@ If you wish to obtain similar figures as the ones in the paper on your samples, 
 `python manage.py plot --run <RUN_PATH>`
 
 where `<RUN_PATH>` is defined as described above.
-
-### Samples
-
-You can find the 20k SMILES samples used in the paper for the analysis in the SAMPLES folder.
