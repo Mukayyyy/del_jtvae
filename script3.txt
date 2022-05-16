@@ -1,0 +1,9 @@
+
+
+
+python manage.py DEL --dataset PCBA --lr 0.0001 --step_size 4 --gamma 0.8 --batch_size 128 --embed_size 128 --hidden_size 128 --hidden_layer 2 --latent_size 64 --random_seed 10000 --use_gpu --validate_after 0.0001 --validation_samples 10 --predictor_num_layers 2 --predictor_hidden_size 64 --k_beta 1 --a_beta 0.01 --l_beta 0.01 --u_beta 1 --increase_beta 40 --k_alpha 1 --a_alpha 1 --l_alpha 1 --u_alpha 100 --increase_alpha 1 --num_generations 10 --population_size 20000 --init_num_epochs 50 --subsequent_num_epochs 25 --save_pops --prob_ts 0.95 --crossover linear --mutation 0.01
+
+python manage.py BO --run_dir ./RUNS/2020-08-06@16:37:33-yifeng-PCBA --num_initial_samples 1000 --n_batch 25 --batch_size_bo 8 --n_trials 1 --mc_samples 64
+python manage.py plot_del --run ./RUNS/2020-08-06@16:37:33-yifeng-PCBA
+
+python manage.py BO --run_dir ./RUNS/2020-08-13@22:56:46-yifeng-ZINC --num_initial_samples 1000 --n_batch 30 --batch_size_bo 8 --n_trials 1 --mc_samples 128
